@@ -23,6 +23,6 @@ identifiers.columns = ['game_id','year'] # .columns permits setting of column la
 
 games = pd.concat([games, identifiers], axis=1, sort=False)
 games = games.fillna('')
-games.loc[:,'type'] = pd.Categorical(games.loc[:,'type']) # : denotes all rows
+games.loc[:,'type'] = pd.Categorical(games.loc[:,'type']) # ":" denotes all rows
 
 print(games.head())
