@@ -17,7 +17,7 @@ games.loc[games['multi5'] == "??", ['multi5']] = "" # 1st arg denotes "??" value
 
 identifiers = games['multi2'].str.extract(r'(.LS(\d{4})\d{5})')
 
-identifiers = identifiers.fillna(method="ffill")
+identifiers = identifiers.fillna(method="fill")
 
 identifiers.columns = ['game_id','year'] # .columns permits setting of column labels to a given list
 
